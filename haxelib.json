@@ -12,6 +12,6 @@
 	"url": "http://github.com/misprintt/mockatoo",
 	"dependencies": 
 	{
-		"mconsole": ""
+		"mconsole": "git:https://github.com/DoclerLabs/mconsole.git"
 	}
 }
