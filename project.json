@@ -12,7 +12,7 @@
 		},
 		"dependencies": 
 		{
-			"mconsole": "1.x"
+			"mconsole": "git:https://github.com/DoclerLabs/mconsole.git"
 		}
 	},
 	"haxelib": 
