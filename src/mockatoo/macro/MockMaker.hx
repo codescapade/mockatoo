@@ -528,6 +528,8 @@ class MockMaker
 		{
 			case FFun(f):
 
+				for ( ff in fields){ if ( ff.name == field.name){ return; }; }
+				
 				if (field.name == "new")
 				{
 					overrideConstructor(field, f);
