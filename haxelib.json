@@ -12,6 +12,6 @@
 	"url": "http://github.com/misprintt/mockatoo",
 	"dependencies": 
 	{
-		"mconsole": ""
+		"mconsole": "1.6.1"
 	}
 }
