@@ -310,6 +310,10 @@ class ClassFields
 								switch(c)
 								{
 									default:
+									case TAbstract(t, tparams):
+										var type = t.get();
+										var complexType:ComplexType = Types.asComplexType(type.module + '.' + type.name, [for (p in tparams) TPType(Types.toComplex(p))]);
+										paramConstraints.push(complexType);
 									case TInst(t, tparams):
 										var type = t.get();
 										var complexType:ComplexType = Types.asComplexType(type.module + '.' + type.name, [for (p in tparams) TPType(Types.toComplex(p))]);
