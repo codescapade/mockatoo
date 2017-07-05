@@ -8,11 +8,11 @@
 	"massive"
 ],
 	"releasenote": "See https://github.com/misprintt/mockatoo/blob/master/CHANGES.md",
-	"version": "3.2.3",
+	"version": "3.2.4",
 	"url": "http://github.com/misprintt/mockatoo",
 	"dependencies":
 	{
 		"mconsole": "1.6.1",
-		"tink_macro": "0.13.3"
+		"tink_macro": ""
 	}
 }
