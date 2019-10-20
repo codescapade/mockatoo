@@ -379,7 +379,7 @@ class ClassFields
 	{
 		return switch (access)
 		{
-			case AccNormal, AccInline: "default";
+			case AccNormal, AccInline, AccCtor: "default";
 			case AccNo: "null";
 			case AccNever: "never";
 			case AccResolve: throw "not implemented for VarAccess [" + access + "]";
