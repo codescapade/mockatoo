@@ -503,13 +503,13 @@ class Issue17Class implements Issue17Interface
 
 	public var nulledGetterSetter(get, set): Null<Void->Void>;
 
-	function set_nulledGetterSetter(v:Void->Void):Void->Void
+	function set_nulledGetterSetter(v:Null<Void->Void>): Null<Void->Void>
 	{
 		value = v;
 		return value;
 	}
 
-	function get_nulledGetterSetter():Void->Void
+	function get_nulledGetterSetter():Null<Void->Void>
 	{
 		return value;
 	}
