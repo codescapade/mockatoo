@@ -309,7 +309,11 @@ class ClassWithTypedConstraint<T:TypedConstraintFoo>
 	}
 }
 
+#if (haxe_ver >= 4)
+class ClassWithMultipleTypedConstraints<T:TypedConstraintFoo & TypedConstraintBar>
+#else
 class ClassWithMultipleTypedConstraints<T:(TypedConstraintFoo,TypedConstraintBar)>
+#end
 {
 	public function new()
 	{
