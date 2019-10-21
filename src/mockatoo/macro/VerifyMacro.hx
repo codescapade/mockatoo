@@ -60,7 +60,7 @@ class VerifyMacro
 		var eIsNotNull:Expr;
 		var eIsAMock:Expr;
 
-		if (Context.getDefines().get("cpp") != null)
+		if (Context.defined("cpp") != null)
 		{
 			eIsNotNull = macro if ($expr == null) throw new mockatoo.exception.VerificationException("Cannot verify [null] mock");
 			eIsAMock = macro if (!Std.is($expr, mockatoo.Mock)) throw new mockatoo.exception.VerificationException("Object is not an instance of mock");
