@@ -576,7 +576,7 @@ class MockMaker
 					
 			case FVar(_,_):
 				if (isInterface) fields.push(field);
-			case FProp(get, set, t,_):
+			case FProp(get, set, t, e):
 
 				t = normaliseComplexType(t);
 
@@ -590,6 +590,10 @@ class MockMaker
 				{
 					//force concrete property for getter setter
 					addConcretePropertyMetadata(field);
+
+          var getVar = getGetterSetterKeywords(get);
+          var setVar = getGetterSetterKeywords(set);
+          field.kind = FProp(getVar, setVar, t, e);
 
 					fields.push(field);
 			 
@@ -673,6 +677,16 @@ class MockMaker
 			access: [Access.APublic]
 		}
 	}
+
+  function getGetterSetterKeywords(value: String): String {
+    if (~/^get_.*/.match(value)) {
+      return "get";
+    }
+    if (~/^set_.*/.match(value)) {
+      return "set";
+    }
+    return value;
+  }
 
 	function toGetterSetter(value:String):String
 	{
